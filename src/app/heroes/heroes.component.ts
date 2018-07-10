@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Hero from '../hero';
 import { HeroesList } from '../heroes-list';
 
 @Component({
@@ -8,7 +9,14 @@ import { HeroesList } from '../heroes-list';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes = HeroesList;
+  heroes: Hero[] = HeroesList;
+
+  selectedHero: Hero;
+
+  onSelect(hero: Hero) :void {
+    this.selectedHero = hero;
+    console.log(hero);
+  }
 
   constructor() { }
 

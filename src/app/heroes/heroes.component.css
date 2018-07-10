@@ -5,6 +5,9 @@
     text-align: left;
     border: 1px solid;
 }
+.heroes-list > li {
+    cursor: pointer;
+}
 .heroes-list > li span {
     width: 50%;
     display: inline-block;
