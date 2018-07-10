@@ -1,0 +1,12 @@
+.heroes-list {
+    margin: 0 auto;
+    list-style-type: none;
+    width: 25%;
+    text-align: left;
+    border: 1px solid;
+}
+.heroes-list > li span {
+    width: 50%;
+    display: inline-block;
+    padding: 10px 0;
+}
