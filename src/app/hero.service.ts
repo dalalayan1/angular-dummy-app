@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
 import Hero from './hero';
 import { HeroesList } from './heroes-list';
 
@@ -7,8 +8,8 @@ import { HeroesList } from './heroes-list';
 })
 export default class HeroService {
 
-  getHeroes(): Hero[] {
-    return HeroesList;
+  getHeroes(): Observable<Hero[]> {
+    return of(HeroesList);
   }
 
   constructor() { }
