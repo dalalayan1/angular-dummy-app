@@ -6,7 +6,14 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
 
+
+const routes: Routes = [
+  { path: '', component: HeroesComponent },
+  { path: 'heroes', component: HeroesComponent }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,9 +23,16 @@ import { MessagesComponent } from './messages/messages.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+}
+
+
+
+
